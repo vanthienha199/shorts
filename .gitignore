@@ -1,0 +1,11 @@
+th/
+s_*.png
+s_*.jpg
+sd*.jpg
+sm.jpg
+posters.jpg
+media.log
+*.js
+build_media.py
+template.html
+videos.json

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ha Le · Kênh video ngắn</title>
+<meta name="description" content="22 video ngắn đã dựng: bất động sản, bản dựng mẫu, sự kiện du học sinh. Xem trực tiếp trên trang.">
+<meta property="og:title" content="Ha Le · Kênh video ngắn">
+<meta property="og:description" content="22 video ngắn đã dựng, xem trực tiếp trên trang.">
+<meta property="og:image" content="p/peter-vay.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,600;1,800&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+:root {
+  --bg: oklch(0.16 0.012 60); --bg2: oklch(0.2 0.014 60); --raise: oklch(0.25 0.016 62);
+  --line: oklch(0.34 0.02 65); --text: oklch(0.95 0.02 85); --mute: oklch(0.74 0.025 80);
+  --accent: oklch(0.8 0.15 72); --accent-ink: oklch(0.2 0.03 70); --live: oklch(0.66 0.21 27);
+  --ease: cubic-bezier(.2,.8,.2,1); --spring: cubic-bezier(.34,1.56,.64,1);
+  --s1:4px; --s2:8px; --s3:16px; --s4:24px; --s5:32px; --s6:48px; --s7:64px; --s8:96px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: "Be Vietnam Pro", system-ui, sans-serif; font-size: 17px; line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0; z-index: 50; pointer-events: none; opacity: .06; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+a { color: inherit; }
+.mono { font-family: "JetBrains Mono", monospace; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: 12px; color: var(--mute); }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 var(--s4); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+/* TV intro */
+#tv { position: fixed; inset: 0; z-index: 100; background: #000; display: grid; place-items: center; }
+#tv canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; }
+#tv .beam { width: 100%; height: 3px; background: #fff; box-shadow: 0 0 40px 8px rgba(255,255,255,.7); transform: scaleX(0); }
+#tv .osd { position: absolute; left: 6vw; top: 8vh; font-family: "JetBrains Mono", monospace; font-weight: 700; color: #7CFF8A; font-size: clamp(18px, 3vw, 34px); letter-spacing: .1em; text-shadow: 0 0 14px rgba(124,255,138,.7); opacity: 0; }
+#tv .skip { position: absolute; right: 5vw; bottom: 6vh; background: none; border: 1px solid #555; color: #aaa; font: inherit; font-size: 13px; padding: 8px 14px; border-radius: 999px; cursor: pointer; }
+#tv.on .beam { animation: beam 1.05s var(--ease) forwards; }
+#tv.on canvas { animation: stat 1.5s linear .55s forwards; }
+#tv.on .osd { animation: osd 1.5s linear .65s forwards; }
+#tv.off { animation: tvoff .5s var(--ease) forwards; pointer-events: none; }
+@keyframes beam { 0% { transform: scaleX(0); } 45% { transform: scaleX(1) scaleY(1); } 100% { transform: scaleX(1) scaleY(600); opacity: 0; } }
+@keyframes stat { 0% { opacity: 0; } 10% { opacity: .9; } 80% { opacity: .75; } 100% { opacity: .2; } }
+@keyframes osd { 0%, 100% { opacity: 0; } 12%, 85% { opacity: 1; } }
+@keyframes tvoff { to { opacity: 0; visibility: hidden; } }
+
+/* nav */
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 40; display: flex; align-items: center; justify-content: space-between; padding: var(--s3) var(--s4); background: linear-gradient(oklch(0.16 0.012 60 / .92), oklch(0.16 0.012 60 / 0)); }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: "JetBrains Mono", monospace; font-weight: 700; letter-spacing: .12em; font-size: 14px; }
+.logo i { width: 10px; height: 10px; border-radius: 50%; background: var(--live); box-shadow: 0 0 0 0 oklch(0.66 0.21 27 / .7); animation: live 1.8s infinite; }
+@keyframes live { 70% { box-shadow: 0 0 0 10px oklch(0.66 0.21 27 / 0); } 100% { box-shadow: 0 0 0 0 oklch(0.66 0.21 27 / 0); } }
+nav .links { display: flex; align-items: center; gap: var(--s4); font-size: 14px; font-weight: 600; }
+nav .links a { text-decoration: none; background: linear-gradient(var(--accent), var(--accent)) 0 100% / 0 2px no-repeat; transition: background-size .2s var(--ease); padding-bottom: 3px; }
+nav .links a:hover { background-size: 100% 2px; }
+.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.lang button { background: none; border: 0; color: var(--mute); font: inherit; font-size: 12px; font-weight: 700; padding: 6px 12px; cursor: pointer; transition: background .15s, color .15s; }
+.lang button[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+@media (max-width: 720px) { nav .links a { display: none; } }
+
+/* hero */
+.hero { min-height: 100svh; display: grid; grid-template-columns: 1.15fr .85fr; gap: var(--s6); align-items: center; padding-top: 88px; padding-bottom: var(--s5); position: relative; }
+.hero h1 { font-family: "Playfair Display", serif; font-weight: 900; font-size: clamp(2.7rem, 6.4vw, 6.2rem); line-height: 1.02; letter-spacing: -.03em; margin: var(--s3) 0 var(--s4); text-wrap: balance; }
+.hero h1 em { font-style: italic; font-weight: 800; color: var(--accent); }
+.hero p.lead { max-width: 34em; color: var(--mute); font-size: 18px; }
+.cta { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: var(--accent-ink); font-weight: 800; text-decoration: none; padding: 16px 28px; border-radius: 999px; margin-top: var(--s5); transition: transform .16s var(--ease), box-shadow .16s var(--ease); box-shadow: 0 1px 0 oklch(0.9 0.1 80) inset, 0 10px 30px oklch(0.8 0.15 72 / .25); }
+.cta:hover { transform: translateY(-3px); } .cta:active { transform: scale(.97); }
+.stats { display: flex; gap: var(--s5); margin-top: var(--s5); flex-wrap: wrap; } .stats div { max-width: 11em; }
+.stats b { display: block; font-family: "Playfair Display", serif; font-size: 40px; line-height: 1; }
+.stats span { font-size: 13px; color: var(--mute); }
+.stage { position: relative; height: min(78svh, 720px); }
+.phone { position: absolute; aspect-ratio: 9/16; border-radius: 34px; overflow: hidden; background: #000; border: 6px solid oklch(0.3 0.015 60); box-shadow: 0 2px 4px rgba(0,0,0,.5), 0 40px 80px rgba(0,0,0,.55); }
+.phone video, .phone img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.phone.a { height: 100%; right: 4%; top: 0; transform: rotate(3deg); z-index: 2; }
+.phone.b { height: 58%; left: -6%; bottom: -4%; transform: rotate(-7deg); z-index: 3; border-color: var(--accent); }
+.phone.c { height: 44%; right: -8%; top: 10%; transform: rotate(10deg); z-index: 1; opacity: .75; }
+.scribble { position: absolute; left: -2%; top: 6%; z-index: 4; font-family: "Playfair Display", serif; font-style: italic; font-size: 22px; color: var(--accent); transform: rotate(-8deg); }
+.scribble svg { display: block; margin: 4px 0 0 40px; }
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; padding-top: 110px; } .stage { height: 520px; margin: 0 var(--s4); } }
+
+/* marquee */
+.marq { border-block: 1px solid var(--line); overflow: hidden; padding: var(--s3) 0; margin-top: var(--s7); }
+.marq div { display: flex; gap: var(--s6); width: max-content; animation: marq 38s linear infinite; font-family: "Playfair Display", serif; font-style: italic; font-size: 30px; white-space: nowrap; }
+.marq span::after { content: "✺"; font-style: normal; color: var(--accent); margin-left: var(--s6); font-size: 20px; vertical-align: middle; }
+@keyframes marq { to { transform: translateX(-50%); } }
+
+/* formats pinned */
+.formats { display: grid; grid-template-columns: .8fr 1.2fr; gap: var(--s7); padding-block: var(--s8); align-items: start; }
+.pin { position: sticky; top: 12svh; height: 76svh; display: grid; place-items: center; }
+.pin .phone { position: relative; height: 100%; transform: rotate(-2deg); }
+.pin .flash { position: absolute; inset: 0; opacity: 0; pointer-events: none; mix-blend-mode: screen; background: repeating-linear-gradient(0deg, rgba(255,255,255,.5) 0 2px, transparent 2px 5px); }
+.pin .flash.go { animation: flash .32s linear; }
+@keyframes flash { 0% { opacity: .9; } 100% { opacity: 0; } }
+.pin .chn { position: absolute; left: 14px; top: 12px; z-index: 3; font-family: "JetBrains Mono", monospace; font-weight: 700; color: #7CFF8A; text-shadow: 0 0 10px rgba(124,255,138,.7); font-size: 15px; }
+.fstep { min-height: 62svh; display: flex; flex-direction: column; justify-content: center; border-top: 1px solid var(--line); padding-block: var(--s6); opacity: .35; transition: opacity .35s var(--ease); }
+.fstep.act { opacity: 1; }
+.fstep .n { font-family: "Playfair Display", serif; font-style: italic; font-size: 90px; line-height: .9; color: var(--accent); }
+.fstep h3 { font-family: "Playfair Display", serif; font-weight: 800; font-size: clamp(2rem, 4.2vw, 3.6rem); line-height: 1.05; letter-spacing: -.02em; margin: var(--s2) 0 var(--s3); }
+.fstep p { color: var(--mute); max-width: 32em; }
+.fstep button { align-self: flex-start; margin-top: var(--s4); background: none; color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 10px 20px; font: inherit; font-weight: 700; font-size: 14px; cursor: pointer; transition: background .16s var(--ease), color .16s, transform .16s; }
+.fstep button:hover { background: var(--text); color: var(--bg); transform: translateY(-2px); }
+@media (max-width: 900px) { .formats { grid-template-columns: 1fr; } .pin { position: relative; top: 0; height: 520px; } .fstep { min-height: 0; opacity: 1; } }
+
+/* watch (YouTube-like) */
+.watch { background: var(--bg2); border-block: 1px solid var(--line); padding-block: var(--s7) var(--s8); }
+.wtop { display: flex; align-items: center; gap: var(--s4); flex-wrap: wrap; margin-bottom: var(--s5); }
+.wtop h2 { font-family: "Playfair Display", serif; font-weight: 900; font-size: clamp(2.2rem, 5vw, 4.4rem); line-height: 1; letter-spacing: -.02em; margin-right: auto; }
+.wtop h2 em { color: var(--accent); font-weight: 800; }
+.chips { display: flex; gap: var(--s2); flex-wrap: wrap; }
+.chip { background: var(--raise); color: var(--text); border: 1px solid transparent; border-radius: 10px; padding: 8px 16px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: background .15s, color .15s, transform .15s var(--ease); }
+.chip:hover { transform: translateY(-2px); } .chip[aria-pressed="true"] { background: var(--text); color: var(--bg); }
+.wgrid { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: var(--s5); align-items: start; }
+.player { position: relative; background: #000; border-radius: 18px; overflow: hidden; height: min(80svh, 780px); display: grid; place-items: center; box-shadow: 0 1px 2px rgba(0,0,0,.5), 0 30px 70px rgba(0,0,0,.45); }
+.player .amb { position: absolute; inset: -10%; background-size: cover; background-position: center; filter: blur(46px) saturate(1.3) brightness(.5); transform: scale(1.1); transition: background-image .4s; }
+.player video { position: absolute; top: 0; bottom: 0; left: 50%; translate: -50% 0; height: 100%; width: auto; aspect-ratio: 9/16; object-fit: contain; background: #000; z-index: 1; }
+.player .static { position: absolute; inset: 0; z-index: 3; opacity: 0; pointer-events: none; }
+.player .static.go { animation: flash .34s linear; }
+.player .osd { position: absolute; z-index: 4; left: 18px; top: 14px; font-family: "JetBrains Mono", monospace; font-weight: 700; color: #7CFF8A; text-shadow: 0 0 12px rgba(124,255,138,.7); font-size: 18px; opacity: 0; transition: opacity .3s; pointer-events: none; }
+.player .osd.show { opacity: 1; }
+.vinfo h3 { font-size: 22px; font-weight: 700; line-height: 1.3; margin-top: var(--s3); text-wrap: balance; }
+.chrow { display: flex; align-items: center; gap: var(--s3); margin-top: var(--s3); flex-wrap: wrap; }
+.av { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-family: "Playfair Display", serif; font-weight: 900; font-style: italic; font-size: 20px; flex: none; }
+.chrow .nm { font-weight: 700; line-height: 1.2; } .chrow .nm small { display: block; color: var(--mute); font-weight: 500; font-size: 13px; }
+.pill { margin-left: auto; display: inline-flex; gap: 8px; align-items: center; background: var(--raise); border-radius: 999px; padding: 9px 16px; font-size: 14px; font-weight: 600; }
+.pill + .pill { margin-left: 0; }
+.desc { background: var(--raise); border-radius: 14px; padding: var(--s3) var(--s4); margin-top: var(--s3); font-size: 14.5px; color: var(--mute); }
+.desc b { color: var(--text); }
+.upnext { position: relative; display: flex; flex-direction: column; gap: 10px; max-height: min(80svh, 780px); overflow-y: auto; padding-right: 6px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+.upnext .mono { margin-bottom: 4px; }
+.item { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: center; background: none; border: 0; color: inherit; font: inherit; text-align: left; cursor: pointer; border-radius: 12px; padding: 6px; transition: background .15s, transform .15s var(--ease); }
+.item:hover { background: var(--raise); transform: translateX(3px); }
+.item[aria-current="true"] { background: var(--raise); outline: 1px solid var(--line); }
+.item .th { position: relative; aspect-ratio: 9/16; border-radius: 10px; overflow: hidden; background: #000; }
+.item .th img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s var(--ease); }
+.item:hover .th img { transform: scale(1.06); }
+.item .th span { position: absolute; right: 4px; bottom: 4px; background: rgba(0,0,0,.82); color: #fff; font-size: 11px; font-weight: 700; padding: 1px 5px; border-radius: 4px; }
+.item .t { font-weight: 700; font-size: 14.5px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.item .m { color: var(--mute); font-size: 12.5px; margin-top: 4px; }
+.item .np { display: none; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+.item[aria-current="true"] .np { display: block; }
+@media (max-width: 1000px) { .wgrid { grid-template-columns: 1fr; } .player { height: min(74svh, 640px); } .upnext { max-height: none; } }
+
+/* wall */
+.wall { padding-block: var(--s8); }
+.wall h2 { font-family: "Playfair Display", serif; font-weight: 900; font-size: clamp(2.2rem, 5vw, 4.4rem); line-height: 1; letter-spacing: -.02em; max-width: 12em; text-wrap: balance; }
+.wall h2 em { color: var(--accent); }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--s3); margin-top: var(--s6); }
+.card { position: relative; aspect-ratio: 9/16; border-radius: 16px; overflow: hidden; border: 0; padding: 0; cursor: pointer; background: #000; transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
+.card:nth-child(5n+2) { transform: translateY(18px); } .card:nth-child(7n+4) { transform: translateY(-12px) rotate(-1deg); }
+.card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 24px 50px rgba(0,0,0,.5); z-index: 2; }
+.card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card::after { content: "▶"; position: absolute; left: 10px; bottom: 10px; width: 34px; height: 34px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-size: 12px; opacity: 0; transform: scale(.6); transition: opacity .16s, transform .2s var(--spring); }
+.card:hover::after { opacity: 1; transform: scale(1); }
+
+/* process */
+.proc { padding-block: var(--s7) var(--s8); border-top: 1px solid var(--line); }
+.proc .grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: var(--s5); margin-top: var(--s6); }
+.step { border-top: 2px solid var(--text); padding-top: var(--s3); }
+.step:first-child { border-color: var(--accent); }
+.step h4 { font-family: "Playfair Display", serif; font-size: 28px; line-height: 1.15; margin: var(--s2) 0; }
+.step:first-child h4 { font-size: 40px; }
+.step p { color: var(--mute); font-size: 15.5px; }
+@media (max-width: 800px) { .proc .grid { grid-template-columns: 1fr; } }
+
+footer { border-top: 1px solid var(--line); padding-block: var(--s6) var(--s7); color: var(--mute); font-size: 14px; }
+footer .big { font-family: "Playfair Display", serif; font-weight: 900; font-style: italic; color: var(--text); font-size: clamp(2.4rem, 7vw, 6rem); line-height: 1; letter-spacing: -.02em; }
+footer .row { display: flex; gap: var(--s5); flex-wrap: wrap; margin-top: var(--s5); align-items: baseline; }
+footer a { color: var(--text); font-weight: 700; }
+footer .cr { margin-top: var(--s5); max-width: 70em; }
+
+/* reveal motif: clip wipe */
+.rv { opacity: 0; }
+.rv.in { opacity: 1; animation: wipe .75s var(--ease) both; animation-delay: calc(var(--i, 0) * 70ms); }
+@keyframes wipe { from { opacity: 1; clip-path: inset(0 0 100% 0); translate: 0 28px; } to { opacity: 1; clip-path: inset(0 0 -10% 0); translate: 0 0; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .rv { opacity: 1; } #tv { display: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div id="tv" aria-hidden="true"><canvas width="320" height="180"></canvas><div class="beam"></div><div class="osd">CH 01 &nbsp;HA LE SHORTS<br>▶ PLAY</div><button class="skip" data-vi="Bỏ qua" data-en="Skip">Bỏ qua</button></div>
+
+<nav>
+  <a class="logo" href="#top"><i></i>HA LE · SHORTS</a>
+  <div class="links">
+    <a href="#formats" data-vi="Kiểu dựng" data-en="Formats">Kiểu dựng</a>
+    <a href="#watch" data-vi="Xem video" data-en="Watch">Xem video</a>
+    <a href="#process" data-vi="Cách làm" data-en="Process">Cách làm</a>
+    <span class="lang" role="group" aria-label="Language"><button data-l="vi" aria-pressed="true">VI</button><button data-l="en" aria-pressed="false">EN</button></span>
+  </div>
+</nav>
+
+<main id="top">
+<section class="wrap hero">
+  <div>
+    <div class="mono rv" data-vi="Kênh 01 · đang phát" data-en="Channel 01 · now playing">Kênh 01 · đang phát</div>
+    <h1 class="rv" style="--i:1"><span style="white-space:nowrap" data-vi="Một video dài." data-en="One long video.">Một video dài.</span><br><em data-vi="Mười video ngắn." data-en="Ten short ones.">Mười video ngắn.</em></h1>
+    <p class="lead rv" style="--i:2" data-vi="Tôi lấy video nói chuyện dài của bạn, chọn đoạn hay nhất, rồi dựng thành video dọc có phụ đề, đồ họa và thumbnail. Dưới đây là 22 video tôi đã dựng, bấm vào là xem được ngay." data-en="I take your long talking video, pick the best moments, and cut vertical shorts with captions, graphics and a thumbnail. Below are 22 videos I have edited. Every one plays right here.">Tôi lấy video nói chuyện dài của bạn, chọn đoạn hay nhất, rồi dựng thành video dọc có phụ đề, đồ họa và thumbnail. Dưới đây là 22 video tôi đã dựng, bấm vào là xem được ngay.</p>
+    <a class="cta rv" style="--i:3" href="#watch"><span>▶</span><span data-vi="Mở kênh xem video" data-en="Open the channel">Mở kênh xem video</span></a>
+    <div class="stats rv" style="--i:4">
+      <div><b>22</b><span data-vi="video đã dựng" data-en="videos edited">video đã dựng</span></div>
+      <div><b>11</b><span data-vi="kiểu dựng khác nhau" data-en="different formats">kiểu dựng khác nhau</span></div>
+      <div><b>3</b><span data-vi="nhóm khách: môi giới, creator, sự kiện" data-en="client types: realtor, creator, events">nhóm khách: môi giới, creator, sự kiện</span></div>
+    </div>
+  </div>
+  <div class="stage rv" style="--i:2">
+    <div class="scribble"><span data-vi="đang chạy thật" data-en="really playing">đang chạy thật</span><svg width="70" height="46" viewBox="0 0 70 46" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 4c10 22 28 32 58 34"/><path d="M50 28l13 10-15 5"/></svg></div>
+    <div class="phone c"><img src="p/demo-ticket.jpg" alt="" loading="lazy"></div>
+    <div class="phone a"><video src="v/demo-card.mp4" poster="p/demo-card.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+    <div class="phone b"><video src="v/peter-chat.mp4" poster="p/peter-chat.jpg" muted loop playsinline autoplay preload="none"></video></div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div id="marq"></div></div>
+
+<section class="wrap formats" id="formats">
+  <div class="pin">
+    <div class="phone"><span class="chn" id="pinCh">CH 01</span><video id="pinV" muted loop playsinline preload="none"></video><div class="flash" id="pinF"></div></div>
+  </div>
+  <div id="fsteps"></div>
+</section>
+
+<section class="watch" id="watch">
+  <div class="wrap">
+    <div class="wtop">
+      <h2><span data-vi="Mở kênh," data-en="Tune in,">Mở kênh,</span> <em data-vi="xem luôn" data-en="watch here">xem luôn</em></h2>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="wgrid">
+      <div>
+        <div class="player"><div class="amb" id="amb"></div><video id="main" controls playsinline preload="metadata"></video><canvas class="static" id="pst" width="320" height="180"></canvas><div class="osd" id="posd"></div></div>
+        <div class="vinfo">
+          <h3 id="vt"></h3>
+          <div class="chrow">
+            <div class="av">H</div>
+            <div class="nm">Ha Le · Shorts<small id="vcr"></small></div>
+            <span class="pill" id="vfmt"></span><span class="pill" id="vdur"></span>
+          </div>
+          <div class="desc" id="vdesc"></div>
+        </div>
+      </div>
+      <aside class="upnext" id="upnext" aria-label="Up next"></aside>
+    </div>
+  </div>
+</section>
+
+<section class="wrap wall">
+  <div class="mono rv" data-vi="Tất cả thumbnail" data-en="Every thumbnail">Tất cả thumbnail</div>
+  <h2 class="rv" style="--i:1"><span data-vi="Mỗi video có" data-en="Each video gets">Mỗi video có</span> <em data-vi="một ảnh bìa riêng" data-en="its own cover">một ảnh bìa riêng</em></h2>
+  <div class="cards" id="cards"></div>
+</section>
+
+<section class="wrap proc" id="process">
+  <div class="mono" data-vi="Cách làm" data-en="Process">Cách làm</div>
+  <div class="grid">
+    <div class="step rv"><div class="mono">01</div><h4 data-vi="Bạn gửi một link YouTube hoặc file video" data-en="You send a YouTube link or a video file">Bạn gửi một link YouTube hoặc file video</h4><p data-vi="Video nói chuyện dài 10 đến 40 phút là đủ cho 5 đến 10 video ngắn." data-en="A 10 to 40 minute talking video is enough for 5 to 10 shorts.">Video nói chuyện dài 10 đến 40 phút là đủ cho 5 đến 10 video ngắn.</p></div>
+    <div class="step rv" style="--i:1"><div class="mono">02</div><h4 data-vi="Tôi chọn đoạn và dựng" data-en="I pick moments and edit">Tôi chọn đoạn và dựng</h4><p data-vi="Phụ đề từng từ, đồ họa theo đúng câu đang nói, che đồ họa cũ, kiểm tra khớp tiếng." data-en="Word by word captions, graphics tied to the exact sentence, old overlays covered, audio sync checked.">Phụ đề từng từ, đồ họa theo đúng câu đang nói, che đồ họa cũ, kiểm tra khớp tiếng.</p></div>
+    <div class="step rv" style="--i:2"><div class="mono">03</div><h4 data-vi="Bạn nhận video dọc và thumbnail" data-en="You get verticals and covers">Bạn nhận video dọc và thumbnail</h4><p data-vi="File 1080x1920 sẵn sàng đăng TikTok, Reels, Shorts. Mỗi video một kiểu dựng, không lặp." data-en="1080x1920 files ready for TikTok, Reels and Shorts. A different format each time.">File 1080x1920 sẵn sàng đăng TikTok, Reels, Shorts. Mỗi video một kiểu dựng, không lặp.</p></div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <div class="big" data-vi="Hết chương trình." data-en="End of broadcast.">Hết chương trình.</div>
+  <div class="row">
+    <span data-vi="Liên hệ dựng video:" data-en="Hire me:">Liên hệ dựng video:</span>
+    <a href="https://www.upwork.com/freelancers/~01aba23b4c7cbbbe9b" target="_blank" rel="noopener">Upwork · Ha L.</a>
+    <a href="https://github.com/vanthienha199" target="_blank" rel="noopener">GitHub · vanthienha199</a>
+  </div>
+  <p class="cr" data-vi="Nguồn video: kênh Nói Với Người Mua Nhà (Peter Dang); các bản dựng mẫu dùng video giấy phép CC BY của The Gary Gao, PhamThucTV, Heo Sữa Luộc USA và Alisha Collins (Living In Wyoming) trên YouTube; video sự kiện của cộng đồng 4U (Fall 4U, Tết 4U, Camp 4U). Video stock và nhạc: Mixkit, Pexels." data-en="Footage: the Nói Với Người Mua Nhà channel (Peter Dang); sample edits use CC BY licensed videos by The Gary Gao, PhamThucTV, Heo Sữa Luộc USA and Alisha Collins (Living In Wyoming) on YouTube; event videos from the 4U community (Fall 4U, Tết 4U, Camp 4U). Stock footage and music: Mixkit, Pexels.">Nguồn video: kênh Nói Với Người Mua Nhà (Peter Dang); các bản dựng mẫu dùng video giấy phép CC BY của The Gary Gao, PhamThucTV, Heo Sữa Luộc USA và Alisha Collins (Living In Wyoming) trên YouTube; video sự kiện của cộng đồng 4U (Fall 4U, Tết 4U, Camp 4U). Video stock và nhạc: Mixkit, Pexels.</p>
+</footer>
+
+<script>
+const V = [{"id": "peter-vay", "tv": "Người Việt vay tiền ngân hàng Mỹ mua nhà được không?", "te": "Can Vietnamese citizens get a US mortgage?", "cat": "realtor", "fv": "Thẻ người nói + infographic", "fe": "Speaker card + infographic", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 54}, {"id": "peter-congty", "tv": "Mua nhà ở Mỹ: đứng tên cá nhân hay công ty?", "te": "Buying in the US: personal name or company?", "cat": "realtor", "fv": "Chia đôi với video stock", "fe": "Split screen with stock footage", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 48}, {"id": "peter-chat", "tv": "Tin nhắn với khách: người Việt mua nhà Mỹ đóng thuế thế nào", "te": "Client texts: how foreign buyers are taxed", "cat": "realtor", "fv": "Tin nhắn với khách", "fe": "Client text chat", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 46}, {"id": "peter-tienmat", "tv": "Mua nhà ở Mỹ cần bao nhiêu tiền mặt", "te": "How much cash you need to buy in the US", "cat": "realtor", "fv": "Chữ nổi + B-roll", "fe": "Text pops + B-roll", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 54}, {"id": "peter-nguoiviet", "tv": "Người Việt có được mua nhà ở Mỹ không?", "te": "Can Vietnamese citizens buy a home in the US?", "cat": "realtor", "fv": "Chữ nổi + B-roll", "fe": "Text pops + B-roll", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 32}, {"id": "demo-card", "tv": "Do you need 20% down?", "te": "Do you need 20% down?", "cat": "demo", "fv": "Thẻ người nói + infographic", "fe": "Speaker card + infographic", "cr": "The Gary Gao, YouTube (CC BY), bản dựng mẫu", "dur": 38}, {"id": "demo-behind", "tv": "Do you need 20% down? (đồ họa sau lưng)", "te": "Do you need 20% down? (graphics behind the speaker)", "cat": "demo", "fv": "Đồ họa sau lưng người nói", "fe": "Graphics behind the speaker", "cr": "The Gary Gao, YouTube (CC BY), bản dựng mẫu", "dur": 40}, {"id": "demo-chat", "tv": "Tin nhắn với khách: mua nhà Mỹ khi ở Việt Nam", "te": "Client texts: buying a US home from Vietnam", "cat": "demo", "fv": "Tin nhắn với khách", "fe": "Client text chat", "cr": "PhamThucTV, YouTube (CC BY), bản dựng mẫu", "dur": 62}, {"id": "demo-ticket", "tv": "Vé máy bay: từ Việt Nam sang Mỹ mua nhà", "te": "Boarding pass: from Vietnam to a US home", "cat": "demo", "fv": "Vé máy bay", "fe": "Boarding pass", "cr": "PhamThucTV, YouTube (CC BY), bản dựng mẫu", "dur": 47}, {"id": "demo-receipt", "tv": "Hóa đơn: chi phí 1 tháng ở Mỹ", "te": "Receipt: one month of living costs in the US", "cat": "demo", "fv": "Hóa đơn in nhiệt", "fe": "Thermal receipt", "cr": "Heo Sữa Luộc USA, YouTube (CC BY), bản dựng mẫu", "dur": 57}, {"id": "demo-map", "tv": "Bản đồ Mỹ: các bang không thuế thu nhập", "te": "US map: the no income tax states", "cat": "demo", "fv": "Bản đồ Mỹ", "fe": "US map", "cr": "Alisha Collins, Living In Wyoming, YouTube (CC BY), bản dựng mẫu", "dur": 56}, {"id": "demo-pham", "tv": "Người ở Việt Nam mua nhà Mỹ được không", "te": "Can you buy a US home while living in Vietnam?", "cat": "demo", "fv": "Chữ nổi + B-roll", "fe": "Text pops + B-roll", "cr": "PhamThucTV, YouTube (CC BY), bản dựng mẫu", "dur": 42}, {"id": "fall-2026", "tv": "Fall 4U 2026: mời bạn đi cắm trại", "te": "Fall 4U 2026: camp invitation", "cat": "event", "fv": "Mời sự kiện", "fe": "Event invite", "cr": "Fall 4U, cộng đồng du học sinh Việt ở Florida", "dur": 31}, {"id": "fall-ice", "tv": "Fall 4U 2025: nhìn lại (mở đầu băng đá)", "te": "Fall 4U 2025 recap (ice hook)", "cat": "event", "fv": "Recap có hook ASMR", "fe": "Recap with ASMR hook", "cr": "Fall 4U", "dur": 17}, {"id": "fall-boarding", "tv": "Fall 4U: thẻ lên máy bay", "te": "Fall 4U: boarding pass", "cat": "event", "fv": "Vé máy bay", "fe": "Boarding pass", "cr": "Fall 4U", "dur": 21}, {"id": "fall-receipt", "tv": "Fall 4U: hóa đơn 0 đồng", "te": "Fall 4U: the zero dollar receipt", "cat": "event", "fv": "Hóa đơn in nhiệt", "fe": "Thermal receipt", "cr": "Fall 4U", "dur": 18}, {"id": "mom-texts", "tv": "Tin nhắn với Mẹ (Fall 4U)", "te": "Texts with Mom (Fall 4U)", "cat": "event", "fv": "Tin nhắn với Mẹ", "fe": "Texts with Mom", "cr": "Fall 4U", "dur": 26}, {"id": "why-4u", "tv": "Vì sao có 4U", "te": "Why 4U", "cat": "event", "fv": "Kể chuyện", "fe": "Story", "cr": "4U", "dur": 30}, {"id": "tet-recap", "tv": "Tết 4U 2025: nhìn lại", "te": "Tet 4U 2025 recap", "cat": "event", "fv": "Recap sự kiện", "fe": "Event recap", "cr": "Tết 4U", "dur": 19}, {"id": "tet-planet", "tv": "Tết 4U 2025: Hành tinh du học sinh", "te": "Tet 4U 2025: Planet Student", "cat": "event", "fv": "Phim tài liệu giả", "fe": "Mock documentary", "cr": "Tết 4U", "dur": 21}, {"id": "camp-recap", "tv": "Camp 4U 2025: nhìn lại", "te": "Camp 4U 2025 recap", "cat": "event", "fv": "Recap sự kiện", "fe": "Event recap", "cr": "Camp 4U", "dur": 24}, {"id": "camp-asmr", "tv": "Camp 4U 2025: ASMR đánh lừa", "te": "Camp 4U 2025: ASMR fake out", "cat": "event", "fv": "Hook ASMR", "fe": "ASMR hook", "cr": "Camp 4U", "dur": 16}];
+const FORMATS = [
+  { id: 'peter-vay', vi: ['Thẻ người nói + infographic', 'Người nói nằm trong thẻ bo góc, phía trên là bảng, thẻ số liệu và dấu mộc chạy theo từng câu. Đồ họa cũ của video gốc được che bằng bảng trượt.'], en: ['Speaker card + infographic', 'The speaker sits in a rounded card while checklists, stat cards and stamps play above, tied to each sentence. Old baked-in overlays get covered by sliding panels.'] },
+  { id: 'peter-chat', vi: ['Tin nhắn với khách', 'Mở bằng màn hình khóa có thông báo. Khách nhắn hỏi, câu trả lời là một bong bóng video thật có phụ đề.'], en: ['Client text chat', 'Opens on a lock screen notification. The client texts a question and the answer arrives as a real video bubble with captions.'] },
+  { id: 'peter-congty', vi: ['Chia đôi với video stock', 'Nửa trên là video stock đổi theo ý đang nói, chữ in nghiêng lớn bật theo từ khóa. Đến từ quan trọng nhất, cả nửa trên thành thẻ một chữ.'], en: ['Split screen with stock footage', 'Stock footage on top changes with the idea being spoken, big italic words pop on keywords, and the single most important word takes over the whole top half.'] },
+  { id: 'demo-ticket', vi: ['Vé máy bay, hóa đơn, bản đồ', 'Biến nội dung thành một đồ vật quen thuộc: vé lên máy bay, hóa đơn in nhiệt chạy từng dòng, bản đồ Mỹ sáng từng bang.'], en: ['Boarding pass, receipt, map', 'Turn the content into a familiar object: a boarding pass, a thermal receipt printing line by line, a US map lighting up state by state.'] },
+  { id: 'demo-behind', vi: ['Đồ họa sau lưng người nói', 'Tách nền người nói để chữ, thẻ định nghĩa và đồng hồ nằm phía sau lưng, giống các kênh lớn.'], en: ['Graphics behind the speaker', 'The speaker is cut out so words, definition cards and clocks sit behind them, the way big channels do it.'] },
+  { id: 'fall-2026', vi: ['Sự kiện và cộng đồng', 'Recap, lời mời, hook ASMR, tin nhắn với Mẹ. 10 video cho ba sự kiện của cộng đồng du học sinh 4U.'], en: ['Events and community', 'Recaps, invites, ASMR hooks, texts with Mom. Ten videos for three events of the 4U student community.'] },
+];
+const CATS = [['all', 'Tất cả', 'All'], ['realtor', 'Bất động sản', 'Real estate'], ['demo', 'Bản dựng mẫu', 'Sample edits'], ['event', 'Sự kiện 4U', '4U events']];
+let L = 'vi', cur = null, cat = 'all';
+const $ = s => document.querySelector(s), byId = id => V.find(v => v.id === id);
+const mmss = s => Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+const T = v => L === 'vi' ? v.tv : v.te, F = v => L === 'vi' ? v.fv : v.fe;
+
+/* noise */
+function noise(c) { const x = c.getContext('2d'), d = x.createImageData(c.width, c.height); for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255; d.data[i] = d.data[i + 1] = d.data[i + 2] = v; d.data[i + 3] = 255; } x.putImageData(d, 0, 0); }
+function runNoise(c, ms) { const t0 = performance.now(); (function f() { noise(c); if (performance.now() - t0 < ms) requestAnimationFrame(f); })(); }
+
+/* TV intro */
+(function () {
+  const tv = $('#tv'); const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const end = () => { tv.classList.add('off'); document.querySelectorAll('.hero .rv').forEach(e => e.classList.add('in')); };
+  if (reduce || sessionStorage.getItem('tv')) { tv.style.display = 'none'; requestAnimationFrame(() => document.querySelectorAll('.hero .rv').forEach(e => e.classList.add('in'))); return; }
+  try { sessionStorage.setItem('tv', '1'); } catch (e) {}
+  tv.classList.add('on'); runNoise(tv.querySelector('canvas'), 2100);
+  const t = setTimeout(end, 2150); tv.querySelector('.skip').onclick = () => { clearTimeout(t); end(); };
+})();
+
+/* i18n */
+function setLang(l) {
+  L = l; document.documentElement.lang = l;
+  document.querySelectorAll('[data-vi]').forEach(e => e.textContent = e.dataset[l]);
+  document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', b.dataset.l === l));
+  document.title = l === 'vi' ? 'Ha Le · Kênh video ngắn' : 'Ha Le · Short-form video channel';
+  renderAll();
+}
+document.querySelectorAll('.lang button').forEach(b => b.onclick = () => setLang(b.dataset.l));
+
+function renderAll() {
+  const fm = [...new Set(V.map(F))]; $('#marq').innerHTML = [...fm, ...fm].map(x => `<span>${x}</span>`).join('');
+  $('#fsteps').innerHTML = FORMATS.map((f, i) => `<div class="fstep" data-id="${f.id}"><div class="n">${String(i + 1).padStart(2, '0')}</div><h3>${f[L][0]}</h3><p>${f[L][1]}</p><button data-play="${f.id}">▶ ${L === 'vi' ? 'Xem video này' : 'Watch this one'}</button></div>`).join('');
+  $('#chips').innerHTML = CATS.map(c => `<button class="chip" data-cat="${c[0]}" aria-pressed="${c[0] === cat}">${L === 'vi' ? c[1] : c[2]} <span style="opacity:.6">${c[0] === 'all' ? V.length : V.filter(v => v.cat === c[0]).length}</span></button>`).join('');
+  $('#cards').innerHTML = V.map((v, i) => `<button class="card rv" style="--i:${i % 6}" data-play="${v.id}" aria-label="${T(v)}"><img src="p/${v.id}.jpg" alt="${T(v)}" loading="lazy"></button>`).join('');
+  renderList(); if (cur) info(byId(cur)); observe(); watchSteps();
+}
+function renderList() {
+  const list = V.filter(v => cat === 'all' || v.cat === cat);
+  $('#upnext').innerHTML = `<div class="mono">${L === 'vi' ? 'Danh sách phát' : 'Playlist'} · ${list.length}</div>` + list.map(v => `<button class="item" data-play="${v.id}" aria-current="${v.id === cur}"><div class="th"><img src="p/${v.id}.jpg" alt="" loading="lazy"><span>${mmss(v.dur)}</span></div><div><div class="np">▶ ${L === 'vi' ? 'ĐANG PHÁT' : 'NOW PLAYING'}</div><div class="t">${T(v)}</div><div class="m">${F(v)}</div></div></button>`).join('');
+}
+function info(v) {
+  $('#vt').textContent = T(v); $('#vcr').textContent = v.cr; $('#vfmt').textContent = '✂ ' + F(v); $('#vdur').textContent = '⏱ ' + mmss(v.dur);
+  $('#vdesc').innerHTML = (L === 'vi' ? `<b>Kiểu dựng:</b> ${v.fv}. <b>Nguồn:</b> ${v.cr}. Video dọc 9:16, có phụ đề và thumbnail riêng.` : `<b>Format:</b> ${v.fe}. <b>Source:</b> ${v.cr}. Vertical 9:16 with captions and its own cover.`);
+}
+function play(id, auto = true, scroll = false) {
+  const v = byId(id), m = $('#main'); cur = id;
+  const st = $('#pst'); st.classList.remove('go'); void st.offsetWidth; noise(st); st.classList.add('go'); runNoise(st, 300);
+  const osd = $('#posd'); osd.textContent = 'CH ' + String(V.indexOf(v) + 1).padStart(2, '0'); osd.classList.add('show'); clearTimeout(play.t); play.t = setTimeout(() => osd.classList.remove('show'), 1600);
+  m.poster = `p/${id}.jpg`; m.src = `v/${id}.mp4`; $('#amb').style.backgroundImage = `url(p/${id}.jpg)`;
+  info(v); renderList();
+  if (auto) m.play().catch(() => {});
+  if (scroll) $('#watch').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const c = document.querySelector('.item[aria-current="true"]'); if (c && c.parentElement.scrollHeight > c.parentElement.clientHeight) c.parentElement.scrollTop = c.offsetTop - c.parentElement.offsetTop - 40;
+}
+document.addEventListener('click', e => {
+  const p = e.target.closest('[data-play]'); if (p) { const inList = p.classList.contains('item'); play(p.dataset.play, true, !inList); return; }
+  const c = e.target.closest('[data-cat]'); if (c) { cat = c.dataset.cat; document.querySelectorAll('.chip').forEach(b => b.setAttribute('aria-pressed', b.dataset.cat === cat)); renderList(); }
+});
+$('#main').addEventListener('ended', () => { const list = V.filter(v => cat === 'all' || v.cat === cat); const i = list.findIndex(v => v.id === cur); play(list[(i + 1) % list.length].id); });
+
+/* reveal on scroll */
+let io;
+function observe() { if (io) io.disconnect(); io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 }); document.querySelectorAll('.rv:not(.in)').forEach(e => io.observe(e)); }
+
+/* pinned phone swaps with the active format */
+let so, pinId = null;
+function setPin(id) {
+  if (pinId === id) return; pinId = id; const v = $('#pinV'), f = $('#pinF');
+  f.classList.remove('go'); void f.offsetWidth; f.classList.add('go');
+  v.poster = `p/${id}.jpg`; v.src = `v/${id}.mp4`; v.play().catch(() => {});
+  $('#pinCh').textContent = 'CH ' + String(FORMATS.findIndex(x => x.id === id) + 1).padStart(2, '0');
+}
+function watchSteps() {
+  if (so) so.disconnect();
+  so = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { document.querySelectorAll('.fstep').forEach(s => s.classList.toggle('act', s === e.target)); setPin(e.target.dataset.id); } }), { rootMargin: '-45% 0px -45% 0px' });
+  document.querySelectorAll('.fstep').forEach(s => so.observe(s));
+}
+/* pause background loops when off screen */
+const vo = new IntersectionObserver(es => es.forEach(e => { e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause(); }), { threshold: .1 });
+document.querySelectorAll('.stage video, #pinV').forEach(v => vo.observe(v));
+
+renderAll(); play(V[0].id, false); setPin(FORMATS[0].id);
+</script>
+</body>
+</html>
