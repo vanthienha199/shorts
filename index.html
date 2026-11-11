@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ha Le · Kênh video ngắn</title>
-<meta name="description" content="22 video ngắn đã dựng: bất động sản, bản dựng mẫu, sự kiện du học sinh. Xem trực tiếp trên trang.">
+<meta name="description" content="21 video ngắn đã dựng: bất động sản, bản dựng mẫu, sự kiện du học sinh. Xem trực tiếp trên trang.">
 <meta property="og:title" content="Ha Le · Kênh video ngắn">
-<meta property="og:description" content="22 video ngắn đã dựng, xem trực tiếp trên trang.">
+<meta property="og:description" content="21 video ngắn đã dựng, xem trực tiếp trên trang.">
 <meta property="og:image" content="p/peter-vay.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,600;1,800&family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap&subset=vietnamese" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap&subset=vietnamese" rel="stylesheet">
 <style>
 :root {
   --bg: oklch(0.16 0.012 60); --bg2: oklch(0.2 0.014 60); --raise: oklch(0.25 0.016 62);
@@ -58,13 +58,13 @@ nav .links a:hover { background-size: 100% 2px; }
 
 /* hero */
 .hero { min-height: 100svh; display: grid; grid-template-columns: 1.15fr .85fr; gap: var(--s6); align-items: center; padding-top: 88px; padding-bottom: var(--s5); position: relative; }
-.hero h1 { font-family: "Playfair Display", serif; font-weight: 900; font-size: clamp(2.7rem, 6.4vw, 6.2rem); line-height: 1.02; letter-spacing: -.03em; margin: var(--s3) 0 var(--s4); text-wrap: balance; }
+.hero h1 { font-family: "Be Vietnam Pro", system-ui, sans-serif; font-weight: 900; font-size: clamp(2.5rem, 5.6vw, 5.4rem); line-height: 1.14; letter-spacing: -.035em; margin: var(--s3) 0 var(--s4); text-wrap: balance; }
 .hero h1 em { font-style: italic; font-weight: 800; color: var(--accent); }
 .hero p.lead { max-width: 34em; color: var(--mute); font-size: 18px; }
 .cta { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: var(--accent-ink); font-weight: 800; text-decoration: none; padding: 16px 28px; border-radius: 999px; margin-top: var(--s5); transition: transform .16s var(--ease), box-shadow .16s var(--ease); box-shadow: 0 1px 0 oklch(0.9 0.1 80) inset, 0 10px 30px oklch(0.8 0.15 72 / .25); }
 .cta:hover { transform: translateY(-3px); } .cta:active { transform: scale(.97); }
 .stats { display: flex; gap: var(--s5); margin-top: var(--s5); flex-wrap: wrap; } .stats div { max-width: 11em; }
-.stats b { display: block; font-family: "Playfair Display", serif; font-size: 40px; line-height: 1; }
+.stats b { display: block; font-family: "Be Vietnam Pro", system-ui, sans-serif; font-size: 40px; line-height: 1; }
 .stats span { font-size: 13px; color: var(--mute); }
 .stage { position: relative; height: min(78svh, 720px); }
 .phone { position: absolute; aspect-ratio: 9/16; border-radius: 34px; overflow: hidden; background: #000; border: 6px solid oklch(0.3 0.015 60); box-shadow: 0 2px 4px rgba(0,0,0,.5), 0 40px 80px rgba(0,0,0,.55); }
@@ -72,13 +72,13 @@ nav .links a:hover { background-size: 100% 2px; }
 .phone.a { height: 100%; right: 4%; top: 0; transform: rotate(3deg); z-index: 2; }
 .phone.b { height: 58%; left: -6%; bottom: -4%; transform: rotate(-7deg); z-index: 3; border-color: var(--accent); }
 .phone.c { height: 44%; right: -8%; top: 10%; transform: rotate(10deg); z-index: 1; opacity: .75; }
-.scribble { position: absolute; left: -2%; top: 6%; z-index: 4; font-family: "Playfair Display", serif; font-style: italic; font-size: 22px; color: var(--accent); transform: rotate(-8deg); }
+.scribble { position: absolute; left: -2%; top: 6%; z-index: 4; font-family: "Be Vietnam Pro", system-ui, sans-serif; font-style: italic; font-size: 22px; color: var(--accent); transform: rotate(-8deg); }
 .scribble svg { display: block; margin: 4px 0 0 40px; }
 @media (max-width: 900px) { .hero { grid-template-columns: 1fr; padding-top: 110px; } .stage { height: 520px; margin: 0 var(--s4); } }
 
 /* marquee */
 .marq { border-block: 1px solid var(--line); overflow: hidden; padding: var(--s3) 0; margin-top: var(--s7); }
-.marq div { display: flex; gap: var(--s6); width: max-content; animation: marq 38s linear infinite; font-family: "Playfair Display", serif; font-style: italic; font-size: 30px; white-space: nowrap; }
+.marq div { display: flex; gap: var(--s6); width: max-content; animation: marq 38s linear infinite; font-family: "Be Vietnam Pro", system-ui, sans-serif; font-style: italic; font-weight: 700; font-size: 26px; white-space: nowrap; }
 .marq span::after { content: "✺"; font-style: normal; color: var(--accent); margin-left: var(--s6); font-size: 20px; vertical-align: middle; }
 @keyframes marq { to { transform: translateX(-50%); } }
 
@@ -92,8 +92,8 @@ nav .links a:hover { background-size: 100% 2px; }
 .pin .chn { position: absolute; left: 14px; top: 12px; z-index: 3; font-family: "JetBrains Mono", monospace; font-weight: 700; color: #7CFF8A; text-shadow: 0 0 10px rgba(124,255,138,.7); font-size: 15px; }
 .fstep { min-height: 62svh; display: flex; flex-direction: column; justify-content: center; border-top: 1px solid var(--line); padding-block: var(--s6); opacity: .35; transition: opacity .35s var(--ease); }
 .fstep.act { opacity: 1; }
-.fstep .n { font-family: "Playfair Display", serif; font-style: italic; font-size: 90px; line-height: .9; color: var(--accent); }
-.fstep h3 { font-family: "Playfair Display", serif; font-weight: 800; font-size: clamp(2rem, 4.2vw, 3.6rem); line-height: 1.05; letter-spacing: -.02em; margin: var(--s2) 0 var(--s3); }
+.fstep .n { font-family: "Be Vietnam Pro", system-ui, sans-serif; font-style: italic; font-size: 90px; line-height: .9; color: var(--accent); }
+.fstep h3 { font-family: "Be Vietnam Pro", system-ui, sans-serif; font-weight: 800; font-size: clamp(1.8rem, 3.6vw, 3rem); line-height: 1.16; letter-spacing: -.02em; margin: var(--s2) 0 var(--s3); }
 .fstep p { color: var(--mute); max-width: 32em; }
 .fstep button { align-self: flex-start; margin-top: var(--s4); background: none; color: var(--text); border: 1px solid var(--line); border-radius: 999px; padding: 10px 20px; font: inherit; font-weight: 700; font-size: 14px; cursor: pointer; transition: background .16s var(--ease), color .16s, transform .16s; }
 .fstep button:hover { background: var(--text); color: var(--bg); transform: translateY(-2px); }
@@ -102,7 +102,7 @@ nav .links a:hover { background-size: 100% 2px; }
 /* watch (YouTube-like) */
 .watch { background: var(--bg2); border-block: 1px solid var(--line); padding-block: var(--s7) var(--s8); }
 .wtop { display: flex; align-items: center; gap: var(--s4); flex-wrap: wrap; margin-bottom: var(--s5); }
-.wtop h2 { font-family: "Playfair Display", serif; font-weight: 900; font-size: clamp(2.2rem, 5vw, 4.4rem); line-height: 1; letter-spacing: -.02em; margin-right: auto; }
+.wtop h2 { font-family: "Be Vietnam Pro", system-ui, sans-serif; font-weight: 900; font-size: clamp(2rem, 4.4vw, 3.8rem); line-height: 1.15; letter-spacing: -.03em; margin-right: auto; }
 .wtop h2 em { color: var(--accent); font-weight: 800; }
 .chips { display: flex; gap: var(--s2); flex-wrap: wrap; }
 .chip { background: var(--raise); color: var(--text); border: 1px solid transparent; border-radius: 10px; padding: 8px 16px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: background .15s, color .15s, transform .15s var(--ease); }
@@ -117,13 +117,13 @@ nav .links a:hover { background-size: 100% 2px; }
 .player .osd.show { opacity: 1; }
 .vinfo h3 { font-size: 22px; font-weight: 700; line-height: 1.3; margin-top: var(--s3); text-wrap: balance; }
 .chrow { display: flex; align-items: center; gap: var(--s3); margin-top: var(--s3); flex-wrap: wrap; }
-.av { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-family: "Playfair Display", serif; font-weight: 900; font-style: italic; font-size: 20px; flex: none; }
+.av { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-family: "Be Vietnam Pro", system-ui, sans-serif; font-weight: 900; font-style: italic; font-size: 20px; flex: none; }
 .chrow .nm { font-weight: 700; line-height: 1.2; } .chrow .nm small { display: block; color: var(--mute); font-weight: 500; font-size: 13px; }
 .pill { margin-left: auto; display: inline-flex; gap: 8px; align-items: center; background: var(--raise); border-radius: 999px; padding: 9px 16px; font-size: 14px; font-weight: 600; }
 .pill + .pill { margin-left: 0; }
 .desc { background: var(--raise); border-radius: 14px; padding: var(--s3) var(--s4); margin-top: var(--s3); font-size: 14.5px; color: var(--mute); }
 .desc b { color: var(--text); }
-.upnext { position: relative; display: flex; flex-direction: column; gap: 10px; max-height: min(80svh, 780px); overflow-y: auto; padding-right: 6px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+.upnext { position: relative; overflow-anchor: none; display: flex; flex-direction: column; gap: 10px; max-height: min(80svh, 780px); overflow-y: auto; padding-right: 6px; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .upnext .mono { margin-bottom: 4px; }
 .item { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: center; background: none; border: 0; color: inherit; font: inherit; text-align: left; cursor: pointer; border-radius: 12px; padding: 6px; transition: background .15s, transform .15s var(--ease); }
 .item:hover { background: var(--raise); transform: translateX(3px); }
@@ -134,13 +134,13 @@ nav .links a:hover { background-size: 100% 2px; }
 .item .th span { position: absolute; right: 4px; bottom: 4px; background: rgba(0,0,0,.82); color: #fff; font-size: 11px; font-weight: 700; padding: 1px 5px; border-radius: 4px; }
 .item .t { font-weight: 700; font-size: 14.5px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .item .m { color: var(--mute); font-size: 12.5px; margin-top: 4px; }
-.item .np { display: none; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+.item .np { display: none; position: absolute; left: 4px; top: 4px; background: var(--accent); color: var(--accent-ink); font-size: 9px; font-weight: 800; letter-spacing: .04em; padding: 2px 5px; border-radius: 4px; }
 .item[aria-current="true"] .np { display: block; }
 @media (max-width: 1000px) { .wgrid { grid-template-columns: 1fr; } .player { height: min(74svh, 640px); } .upnext { max-height: none; } }
 
 /* wall */
 .wall { padding-block: var(--s8); }
-.wall h2 { font-family: "Playfair Display", serif; font-weight: 900; font-size: clamp(2.2rem, 5vw, 4.4rem); line-height: 1; letter-spacing: -.02em; max-width: 12em; text-wrap: balance; }
+.wall h2 { font-family: "Be Vietnam Pro", system-ui, sans-serif; font-weight: 900; font-size: clamp(2rem, 4.4vw, 3.8rem); line-height: 1.15; letter-spacing: -.03em; max-width: 14em; text-wrap: balance; }
 .wall h2 em { color: var(--accent); }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: var(--s3); margin-top: var(--s6); }
 .card { position: relative; aspect-ratio: 9/16; border-radius: 16px; overflow: hidden; border: 0; padding: 0; cursor: pointer; background: #000; transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
@@ -155,13 +155,13 @@ nav .links a:hover { background-size: 100% 2px; }
 .proc .grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: var(--s5); margin-top: var(--s6); }
 .step { border-top: 2px solid var(--text); padding-top: var(--s3); }
 .step:first-child { border-color: var(--accent); }
-.step h4 { font-family: "Playfair Display", serif; font-size: 28px; line-height: 1.15; margin: var(--s2) 0; }
-.step:first-child h4 { font-size: 40px; }
+.step h4 { font-family: "Be Vietnam Pro", system-ui, sans-serif; font-weight: 800; letter-spacing: -.02em; font-size: 24px; line-height: 1.25; margin: var(--s2) 0; }
+.step:first-child h4 { font-size: 32px; }
 .step p { color: var(--mute); font-size: 15.5px; }
 @media (max-width: 800px) { .proc .grid { grid-template-columns: 1fr; } }
 
 footer { border-top: 1px solid var(--line); padding-block: var(--s6) var(--s7); color: var(--mute); font-size: 14px; }
-footer .big { font-family: "Playfair Display", serif; font-weight: 900; font-style: italic; color: var(--text); font-size: clamp(2.4rem, 7vw, 6rem); line-height: 1; letter-spacing: -.02em; }
+footer .big { font-family: "Be Vietnam Pro", system-ui, sans-serif; font-weight: 900; font-style: italic; color: var(--text); font-size: clamp(2.2rem, 6vw, 5rem); line-height: 1.15; letter-spacing: -.02em; }
 footer .row { display: flex; gap: var(--s5); flex-wrap: wrap; margin-top: var(--s5); align-items: baseline; }
 footer a { color: var(--text); font-weight: 700; }
 footer .cr { margin-top: var(--s5); max-width: 70em; }
@@ -169,7 +169,7 @@ footer .cr { margin-top: var(--s5); max-width: 70em; }
 /* reveal motif: clip wipe */
 .rv { opacity: 0; }
 .rv.in { opacity: 1; animation: wipe .75s var(--ease) both; animation-delay: calc(var(--i, 0) * 70ms); }
-@keyframes wipe { from { opacity: 1; clip-path: inset(0 0 100% 0); translate: 0 28px; } to { opacity: 1; clip-path: inset(0 0 -10% 0); translate: 0 0; } }
+@keyframes wipe { from { opacity: 1; clip-path: inset(0 0 100% 0); translate: 0 28px; } to { opacity: 1; clip-path: inset(-30% -30% -30% -30%); translate: 0 0; } }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .rv { opacity: 1; } #tv { display: none; } html { scroll-behavior: auto; } }
 </style>
 </head>
@@ -191,11 +191,11 @@ footer .cr { margin-top: var(--s5); max-width: 70em; }
   <div>
     <div class="mono rv" data-vi="Kênh 01 · đang phát" data-en="Channel 01 · now playing">Kênh 01 · đang phát</div>
     <h1 class="rv" style="--i:1"><span style="white-space:nowrap" data-vi="Một video dài." data-en="One long video.">Một video dài.</span><br><em data-vi="Mười video ngắn." data-en="Ten short ones.">Mười video ngắn.</em></h1>
-    <p class="lead rv" style="--i:2" data-vi="Tôi lấy video nói chuyện dài của bạn, chọn đoạn hay nhất, rồi dựng thành video dọc có phụ đề, đồ họa và thumbnail. Dưới đây là 22 video tôi đã dựng, bấm vào là xem được ngay." data-en="I take your long talking video, pick the best moments, and cut vertical shorts with captions, graphics and a thumbnail. Below are 22 videos I have edited. Every one plays right here.">Tôi lấy video nói chuyện dài của bạn, chọn đoạn hay nhất, rồi dựng thành video dọc có phụ đề, đồ họa và thumbnail. Dưới đây là 22 video tôi đã dựng, bấm vào là xem được ngay.</p>
+    <p class="lead rv" style="--i:2" data-vi="Tôi lấy video nói chuyện dài của bạn, chọn đoạn hay nhất, rồi dựng thành video dọc có phụ đề, đồ họa và thumbnail. Dưới đây là 21 video tôi đã dựng, bấm vào là xem được ngay." data-en="I take your long talking video, pick the best moments, and cut vertical shorts with captions, graphics and a thumbnail. Below are 21 videos I have edited. Every one plays right here.">Tôi lấy video nói chuyện dài của bạn, chọn đoạn hay nhất, rồi dựng thành video dọc có phụ đề, đồ họa và thumbnail. Dưới đây là 21 video tôi đã dựng, bấm vào là xem được ngay.</p>
     <a class="cta rv" style="--i:3" href="#watch"><span>▶</span><span data-vi="Mở kênh xem video" data-en="Open the channel">Mở kênh xem video</span></a>
     <div class="stats rv" style="--i:4">
-      <div><b>22</b><span data-vi="video đã dựng" data-en="videos edited">video đã dựng</span></div>
-      <div><b>11</b><span data-vi="kiểu dựng khác nhau" data-en="different formats">kiểu dựng khác nhau</span></div>
+      <div><b>21</b><span data-vi="video đã dựng" data-en="videos edited">video đã dựng</span></div>
+      <div><b>14</b><span data-vi="kiểu dựng khác nhau" data-en="different formats">kiểu dựng khác nhau</span></div>
       <div><b>3</b><span data-vi="nhóm khách: môi giới, creator, sự kiện" data-en="client types: realtor, creator, events">nhóm khách: môi giới, creator, sự kiện</span></div>
     </div>
   </div>
@@ -267,14 +267,14 @@ footer .cr { margin-top: var(--s5); max-width: 70em; }
 </footer>
 
 <script>
-const V = [{"id": "peter-vay", "tv": "Người Việt vay tiền ngân hàng Mỹ mua nhà được không?", "te": "Can Vietnamese citizens get a US mortgage?", "cat": "realtor", "fv": "Thẻ người nói + infographic", "fe": "Speaker card + infographic", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 54}, {"id": "peter-congty", "tv": "Mua nhà ở Mỹ: đứng tên cá nhân hay công ty?", "te": "Buying in the US: personal name or company?", "cat": "realtor", "fv": "Chia đôi với video stock", "fe": "Split screen with stock footage", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 48}, {"id": "peter-chat", "tv": "Tin nhắn với khách: người Việt mua nhà Mỹ đóng thuế thế nào", "te": "Client texts: how foreign buyers are taxed", "cat": "realtor", "fv": "Tin nhắn với khách", "fe": "Client text chat", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 46}, {"id": "peter-tienmat", "tv": "Mua nhà ở Mỹ cần bao nhiêu tiền mặt", "te": "How much cash you need to buy in the US", "cat": "realtor", "fv": "Chữ nổi + B-roll", "fe": "Text pops + B-roll", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 54}, {"id": "peter-nguoiviet", "tv": "Người Việt có được mua nhà ở Mỹ không?", "te": "Can Vietnamese citizens buy a home in the US?", "cat": "realtor", "fv": "Chữ nổi + B-roll", "fe": "Text pops + B-roll", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 32}, {"id": "demo-card", "tv": "Do you need 20% down?", "te": "Do you need 20% down?", "cat": "demo", "fv": "Thẻ người nói + infographic", "fe": "Speaker card + infographic", "cr": "The Gary Gao, YouTube (CC BY), bản dựng mẫu", "dur": 38}, {"id": "demo-behind", "tv": "Do you need 20% down? (đồ họa sau lưng)", "te": "Do you need 20% down? (graphics behind the speaker)", "cat": "demo", "fv": "Đồ họa sau lưng người nói", "fe": "Graphics behind the speaker", "cr": "The Gary Gao, YouTube (CC BY), bản dựng mẫu", "dur": 40}, {"id": "demo-chat", "tv": "Tin nhắn với khách: mua nhà Mỹ khi ở Việt Nam", "te": "Client texts: buying a US home from Vietnam", "cat": "demo", "fv": "Tin nhắn với khách", "fe": "Client text chat", "cr": "PhamThucTV, YouTube (CC BY), bản dựng mẫu", "dur": 62}, {"id": "demo-ticket", "tv": "Vé máy bay: từ Việt Nam sang Mỹ mua nhà", "te": "Boarding pass: from Vietnam to a US home", "cat": "demo", "fv": "Vé máy bay", "fe": "Boarding pass", "cr": "PhamThucTV, YouTube (CC BY), bản dựng mẫu", "dur": 47}, {"id": "demo-receipt", "tv": "Hóa đơn: chi phí 1 tháng ở Mỹ", "te": "Receipt: one month of living costs in the US", "cat": "demo", "fv": "Hóa đơn in nhiệt", "fe": "Thermal receipt", "cr": "Heo Sữa Luộc USA, YouTube (CC BY), bản dựng mẫu", "dur": 57}, {"id": "demo-map", "tv": "Bản đồ Mỹ: các bang không thuế thu nhập", "te": "US map: the no income tax states", "cat": "demo", "fv": "Bản đồ Mỹ", "fe": "US map", "cr": "Alisha Collins, Living In Wyoming, YouTube (CC BY), bản dựng mẫu", "dur": 56}, {"id": "demo-pham", "tv": "Người ở Việt Nam mua nhà Mỹ được không", "te": "Can you buy a US home while living in Vietnam?", "cat": "demo", "fv": "Chữ nổi + B-roll", "fe": "Text pops + B-roll", "cr": "PhamThucTV, YouTube (CC BY), bản dựng mẫu", "dur": 42}, {"id": "fall-2026", "tv": "Fall 4U 2026: mời bạn đi cắm trại", "te": "Fall 4U 2026: camp invitation", "cat": "event", "fv": "Mời sự kiện", "fe": "Event invite", "cr": "Fall 4U, cộng đồng du học sinh Việt ở Florida", "dur": 31}, {"id": "fall-ice", "tv": "Fall 4U 2025: nhìn lại (mở đầu băng đá)", "te": "Fall 4U 2025 recap (ice hook)", "cat": "event", "fv": "Recap có hook ASMR", "fe": "Recap with ASMR hook", "cr": "Fall 4U", "dur": 17}, {"id": "fall-boarding", "tv": "Fall 4U: thẻ lên máy bay", "te": "Fall 4U: boarding pass", "cat": "event", "fv": "Vé máy bay", "fe": "Boarding pass", "cr": "Fall 4U", "dur": 21}, {"id": "fall-receipt", "tv": "Fall 4U: hóa đơn 0 đồng", "te": "Fall 4U: the zero dollar receipt", "cat": "event", "fv": "Hóa đơn in nhiệt", "fe": "Thermal receipt", "cr": "Fall 4U", "dur": 18}, {"id": "mom-texts", "tv": "Tin nhắn với Mẹ (Fall 4U)", "te": "Texts with Mom (Fall 4U)", "cat": "event", "fv": "Tin nhắn với Mẹ", "fe": "Texts with Mom", "cr": "Fall 4U", "dur": 26}, {"id": "why-4u", "tv": "Vì sao có 4U", "te": "Why 4U", "cat": "event", "fv": "Kể chuyện", "fe": "Story", "cr": "4U", "dur": 30}, {"id": "tet-recap", "tv": "Tết 4U 2025: nhìn lại", "te": "Tet 4U 2025 recap", "cat": "event", "fv": "Recap sự kiện", "fe": "Event recap", "cr": "Tết 4U", "dur": 19}, {"id": "tet-planet", "tv": "Tết 4U 2025: Hành tinh du học sinh", "te": "Tet 4U 2025: Planet Student", "cat": "event", "fv": "Phim tài liệu giả", "fe": "Mock documentary", "cr": "Tết 4U", "dur": 21}, {"id": "camp-recap", "tv": "Camp 4U 2025: nhìn lại", "te": "Camp 4U 2025 recap", "cat": "event", "fv": "Recap sự kiện", "fe": "Event recap", "cr": "Camp 4U", "dur": 24}, {"id": "camp-asmr", "tv": "Camp 4U 2025: ASMR đánh lừa", "te": "Camp 4U 2025: ASMR fake out", "cat": "event", "fv": "Hook ASMR", "fe": "ASMR hook", "cr": "Camp 4U", "dur": 16}];
+const V = [{"id": "peter-vay", "tv": "Người Việt vay tiền ngân hàng Mỹ mua nhà được không?", "te": "Can Vietnamese citizens get a US mortgage?", "cat": "realtor", "fv": "Thẻ người nói + infographic", "fe": "Speaker card + infographic", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 54}, {"id": "peter-congty", "tv": "Mua nhà ở Mỹ: đứng tên cá nhân hay công ty?", "te": "Buying in the US: personal name or company?", "cat": "realtor", "fv": "Chia đôi với video stock", "fe": "Split screen with stock footage", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 48}, {"id": "peter-chat", "tv": "Tin nhắn với khách: người Việt mua nhà Mỹ đóng thuế thế nào", "te": "Client texts: how foreign buyers are taxed", "cat": "realtor", "fv": "Tin nhắn với khách", "fe": "Client text chat", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 46}, {"id": "peter-tienmat", "tv": "Mua nhà ở Mỹ cần bao nhiêu tiền mặt", "te": "How much cash you need to buy in the US", "cat": "realtor", "fv": "Chữ nổi + B-roll", "fe": "Text pops + B-roll", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 54}, {"id": "peter-nguoiviet", "tv": "Người Việt có được mua nhà ở Mỹ không?", "te": "Can Vietnamese citizens buy a home in the US?", "cat": "realtor", "fv": "Chữ nổi + B-roll", "fe": "Text pops + B-roll", "cr": "Nói Với Người Mua Nhà (Peter Dang)", "dur": 32}, {"id": "demo-card", "tv": "Do you need 20% down?", "te": "Do you need 20% down?", "cat": "demo", "fv": "Thẻ người nói + infographic", "fe": "Speaker card + infographic", "cr": "The Gary Gao, YouTube (CC BY), bản dựng mẫu", "dur": 38}, {"id": "demo-behind", "tv": "Do you need 20% down? (đồ họa sau lưng)", "te": "Do you need 20% down? (graphics behind the speaker)", "cat": "demo", "fv": "Đồ họa sau lưng người nói", "fe": "Graphics behind the speaker", "cr": "The Gary Gao, YouTube (CC BY), bản dựng mẫu", "dur": 40}, {"id": "demo-chat", "tv": "Tin nhắn với khách: mua nhà Mỹ khi ở Việt Nam", "te": "Client texts: buying a US home from Vietnam", "cat": "demo", "fv": "Tin nhắn với khách", "fe": "Client text chat", "cr": "PhamThucTV, YouTube (CC BY), bản dựng mẫu", "dur": 62}, {"id": "demo-ticket", "tv": "Vé máy bay: từ Việt Nam sang Mỹ mua nhà", "te": "Boarding pass: from Vietnam to a US home", "cat": "demo", "fv": "Vé máy bay", "fe": "Boarding pass", "cr": "PhamThucTV, YouTube (CC BY), bản dựng mẫu", "dur": 47}, {"id": "demo-receipt", "tv": "Hóa đơn: chi phí 1 tháng ở Mỹ", "te": "Receipt: one month of living costs in the US", "cat": "demo", "fv": "Hóa đơn in nhiệt", "fe": "Thermal receipt", "cr": "Heo Sữa Luộc USA, YouTube (CC BY), bản dựng mẫu", "dur": 57}, {"id": "demo-map", "tv": "Bản đồ Mỹ: các bang không thuế thu nhập", "te": "US map: the no income tax states", "cat": "demo", "fv": "Bản đồ Mỹ", "fe": "US map", "cr": "Alisha Collins, Living In Wyoming, YouTube (CC BY), bản dựng mẫu", "dur": 56}, {"id": "demo-pham", "tv": "Người ở Việt Nam mua nhà Mỹ được không", "te": "Can you buy a US home while living in Vietnam?", "cat": "demo", "fv": "Chữ nổi + B-roll", "fe": "Text pops + B-roll", "cr": "PhamThucTV, YouTube (CC BY), bản dựng mẫu", "dur": 42}, {"id": "fall-2026", "tv": "Fall 4U 2026: mời bạn đi cắm trại", "te": "Fall 4U 2026: camp invitation", "cat": "event", "fv": "Mời sự kiện", "fe": "Event invite", "cr": "Fall 4U, cộng đồng du học sinh Việt ở Florida", "dur": 31}, {"id": "fall-ice", "tv": "Fall 4U 2025: nhìn lại (mở đầu băng đá)", "te": "Fall 4U 2025 recap (ice hook)", "cat": "event", "fv": "Recap có hook ASMR", "fe": "Recap with ASMR hook", "cr": "Fall 4U", "dur": 17}, {"id": "fall-boarding", "tv": "Fall 4U: thẻ lên máy bay", "te": "Fall 4U: boarding pass", "cat": "event", "fv": "Vé máy bay", "fe": "Boarding pass", "cr": "Fall 4U", "dur": 21}, {"id": "fall-receipt", "tv": "Fall 4U: hóa đơn 0 đồng", "te": "Fall 4U: the zero dollar receipt", "cat": "event", "fv": "Hóa đơn in nhiệt", "fe": "Thermal receipt", "cr": "Fall 4U", "dur": 18}, {"id": "mom-texts", "tv": "Tin nhắn với Mẹ (Fall 4U)", "te": "Texts with Mom (Fall 4U)", "cat": "event", "fv": "Tin nhắn với Mẹ", "fe": "Texts with Mom", "cr": "Fall 4U", "dur": 26}, {"id": "why-4u", "tv": "Vì sao có 4U", "te": "Why 4U", "cat": "event", "fv": "Kể chuyện", "fe": "Story", "cr": "4U", "dur": 30}, {"id": "tet-recap", "tv": "Tết 4U 2025: nhìn lại", "te": "Tet 4U 2025 recap", "cat": "event", "fv": "Recap sự kiện", "fe": "Event recap", "cr": "Tết 4U", "dur": 19}, {"id": "tet-planet", "tv": "Tết 4U 2025: Hành tinh du học sinh", "te": "Tet 4U 2025: Planet Student", "cat": "event", "fv": "Phim tài liệu giả", "fe": "Mock documentary", "cr": "Tết 4U", "dur": 21}, {"id": "camp-recap", "tv": "Camp 4U 2025: nhìn lại", "te": "Camp 4U 2025 recap", "cat": "event", "fv": "Recap sự kiện", "fe": "Event recap", "cr": "Camp 4U", "dur": 24}];
 const FORMATS = [
   { id: 'peter-vay', vi: ['Thẻ người nói + infographic', 'Người nói nằm trong thẻ bo góc, phía trên là bảng, thẻ số liệu và dấu mộc chạy theo từng câu. Đồ họa cũ của video gốc được che bằng bảng trượt.'], en: ['Speaker card + infographic', 'The speaker sits in a rounded card while checklists, stat cards and stamps play above, tied to each sentence. Old baked-in overlays get covered by sliding panels.'] },
   { id: 'peter-chat', vi: ['Tin nhắn với khách', 'Mở bằng màn hình khóa có thông báo. Khách nhắn hỏi, câu trả lời là một bong bóng video thật có phụ đề.'], en: ['Client text chat', 'Opens on a lock screen notification. The client texts a question and the answer arrives as a real video bubble with captions.'] },
   { id: 'peter-congty', vi: ['Chia đôi với video stock', 'Nửa trên là video stock đổi theo ý đang nói, chữ in nghiêng lớn bật theo từ khóa. Đến từ quan trọng nhất, cả nửa trên thành thẻ một chữ.'], en: ['Split screen with stock footage', 'Stock footage on top changes with the idea being spoken, big italic words pop on keywords, and the single most important word takes over the whole top half.'] },
   { id: 'demo-ticket', vi: ['Vé máy bay, hóa đơn, bản đồ', 'Biến nội dung thành một đồ vật quen thuộc: vé lên máy bay, hóa đơn in nhiệt chạy từng dòng, bản đồ Mỹ sáng từng bang.'], en: ['Boarding pass, receipt, map', 'Turn the content into a familiar object: a boarding pass, a thermal receipt printing line by line, a US map lighting up state by state.'] },
   { id: 'demo-behind', vi: ['Đồ họa sau lưng người nói', 'Tách nền người nói để chữ, thẻ định nghĩa và đồng hồ nằm phía sau lưng, giống các kênh lớn.'], en: ['Graphics behind the speaker', 'The speaker is cut out so words, definition cards and clocks sit behind them, the way big channels do it.'] },
-  { id: 'fall-2026', vi: ['Sự kiện và cộng đồng', 'Recap, lời mời, hook ASMR, tin nhắn với Mẹ. 10 video cho ba sự kiện của cộng đồng du học sinh 4U.'], en: ['Events and community', 'Recaps, invites, ASMR hooks, texts with Mom. Ten videos for three events of the 4U student community.'] },
+  { id: 'fall-2026', vi: ['Sự kiện và cộng đồng', 'Recap, lời mời, hook ASMR, tin nhắn với Mẹ. 9 video cho ba sự kiện của cộng đồng du học sinh 4U.'], en: ['Events and community', 'Recaps, invites, ASMR hooks, texts with Mom. Nine videos for three events of the 4U student community.'] },
 ];
 const CATS = [['all', 'Tất cả', 'All'], ['realtor', 'Bất động sản', 'Real estate'], ['demo', 'Bản dựng mẫu', 'Sample edits'], ['event', 'Sự kiện 4U', '4U events']];
 let L = 'vi', cur = null, cat = 'all';
@@ -315,7 +315,7 @@ function renderAll() {
 }
 function renderList() {
   const list = V.filter(v => cat === 'all' || v.cat === cat);
-  $('#upnext').innerHTML = `<div class="mono">${L === 'vi' ? 'Danh sách phát' : 'Playlist'} · ${list.length}</div>` + list.map(v => `<button class="item" data-play="${v.id}" aria-current="${v.id === cur}"><div class="th"><img src="p/${v.id}.jpg" alt="" loading="lazy"><span>${mmss(v.dur)}</span></div><div><div class="np">▶ ${L === 'vi' ? 'ĐANG PHÁT' : 'NOW PLAYING'}</div><div class="t">${T(v)}</div><div class="m">${F(v)}</div></div></button>`).join('');
+  $('#upnext').innerHTML = `<div class="mono">${L === 'vi' ? 'Danh sách phát' : 'Playlist'} · ${list.length}</div>` + list.map(v => `<button class="item" data-play="${v.id}" aria-current="${v.id === cur}"><div class="th"><img src="p/${v.id}.jpg" alt="" loading="lazy"><span>${mmss(v.dur)}</span><i class="np" style="font-style:normal">▶ ${L === 'vi' ? 'ĐANG PHÁT' : 'PLAYING'}</i></div><div><div class="t">${T(v)}</div><div class="m">${F(v)}</div></div></button>`).join('');
 }
 function info(v) {
   $('#vt').textContent = T(v); $('#vcr').textContent = v.cr; $('#vfmt').textContent = '✂ ' + F(v); $('#vdur').textContent = '⏱ ' + mmss(v.dur);
@@ -326,10 +326,9 @@ function play(id, auto = true, scroll = false) {
   const st = $('#pst'); st.classList.remove('go'); void st.offsetWidth; noise(st); st.classList.add('go'); runNoise(st, 300);
   const osd = $('#posd'); osd.textContent = 'CH ' + String(V.indexOf(v) + 1).padStart(2, '0'); osd.classList.add('show'); clearTimeout(play.t); play.t = setTimeout(() => osd.classList.remove('show'), 1600);
   m.poster = `p/${id}.jpg`; m.src = `v/${id}.mp4`; $('#amb').style.backgroundImage = `url(p/${id}.jpg)`;
-  info(v); renderList();
+  info(v); document.querySelectorAll('.item').forEach(b => b.setAttribute('aria-current', b.dataset.play === id));
   if (auto) m.play().catch(() => {});
   if (scroll) $('#watch').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  const c = document.querySelector('.item[aria-current="true"]'); if (c && c.parentElement.scrollHeight > c.parentElement.clientHeight) c.parentElement.scrollTop = c.offsetTop - c.parentElement.offsetTop - 40;
 }
 document.addEventListener('click', e => {
   const p = e.target.closest('[data-play]'); if (p) { const inList = p.classList.contains('item'); play(p.dataset.play, true, !inList); return; }
