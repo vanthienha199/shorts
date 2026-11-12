@@ -9,3 +9,4 @@ media.log
 build_media.py
 template.html
 videos.json
+build_index.py
